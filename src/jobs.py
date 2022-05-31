@@ -10,4 +10,3 @@ def read(path):
         for job in jobs_list:
             all_jobs.append(job)
     return all_jobs
-
