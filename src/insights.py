@@ -63,13 +63,13 @@ def filter_by_industry(jobs, industry):
 def get_max_salary(path):
     all_jobs = read(path)
 
-    no_repeated_max_salary = []
+    max_salary = []
 
     for row in all_jobs:
         if row["max_salary"] != '':
-            no_repeated_max_salary.append(int(row["max_salary"]))
+            max_salary.append(int(row["max_salary"]))
 
-    return max(no_repeated_max_salary)
+    return max(max_salary)
 
 
 print(get_max_salary('src/jobs.csv'))
