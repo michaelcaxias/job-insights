@@ -47,7 +47,7 @@ def get_max_salary(path):
 
     for row in all_jobs:
         # https://www.delftstack.com/howto/python/python-check-if-character-is-number/#:~:text=the%20conditional%20statement.-,Use%20the%20isdigit()%20Method%20to%20Check%20if%20a%20Given,in%20the%20scope%20of%20digits.
-        if row["max_salary"] != '' and row["max_salary"].isdigit():
+        if row["max_salary"].isdigit():
             max_salary.append(int(row["max_salary"]))
 
     return max(max_salary)
@@ -60,7 +60,7 @@ def get_min_salary(path):
 
     for row in all_jobs:
         # https://www.delftstack.com/howto/python/python-check-if-character-is-number/#:~:text=the%20conditional%20statement.-,Use%20the%20isdigit()%20Method%20to%20Check%20if%20a%20Given,in%20the%20scope%20of%20digits.
-        if row["min_salary"] != '' and row["min_salary"].isdigit():
+        if row["min_salary"].isdigit():
             min_salary.append(int(row["min_salary"]))
 
     return min(min_salary)
