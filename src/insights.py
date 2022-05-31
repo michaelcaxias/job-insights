@@ -66,7 +66,7 @@ def get_max_salary(path):
     max_salary = []
 
     for row in all_jobs:
-        if row["max_salary"] != '':
+        if row["max_salary"] != '' and row["max_salary"].isdigit():
             max_salary.append(int(row["max_salary"]))
 
     return max(max_salary)
