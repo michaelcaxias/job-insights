@@ -36,9 +36,10 @@ def get_unique_industries(path):
     no_repeated_industries = set()
 
     for row in all_jobs:
-      no_repeated_industries.add(row["industry"])
+        no_repeated_industries.add(row["industry"])
 
     return no_repeated_industries
+
 
 def filter_by_industry(jobs, industry):
     """Filters a list of jobs by industry
@@ -59,21 +60,17 @@ def filter_by_industry(jobs, industry):
 
 
 def get_max_salary(path):
-    """Get the maximum salary of all jobs
+    all_jobs = read(path)
 
-    Must call `read`
+    no_repeated_max_salary = set()
 
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
+    for row in all_jobs:
+        no_repeated_max_salary.add(row["max_salary"])
 
-    Returns
-    -------
-    int
-        The maximum salary paid out of all job opportunities
-    """
-    pass
+    return max(no_repeated_max_salary)
+
+
+print(get_max_salary('src/jobs.csv'))
 
 
 def get_min_salary(path):
