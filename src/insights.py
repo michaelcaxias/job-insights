@@ -36,7 +36,8 @@ def get_unique_industries(path):
     no_repeated_industries = set()
 
     for row in all_jobs:
-        no_repeated_industries.add(row["industry"])
+        if row["industry"] != '':
+            no_repeated_industries.add(row["industry"])
 
     return no_repeated_industries
 
@@ -62,10 +63,11 @@ def filter_by_industry(jobs, industry):
 def get_max_salary(path):
     all_jobs = read(path)
 
-    no_repeated_max_salary = set()
+    no_repeated_max_salary = []
 
     for row in all_jobs:
-        no_repeated_max_salary.add(row["max_salary"])
+        if row["max_salary"] != '':
+            no_repeated_max_salary.append(int(row["max_salary"]))
 
     return max(no_repeated_max_salary)
 
