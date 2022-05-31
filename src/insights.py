@@ -73,25 +73,17 @@ def get_max_salary(path):
     return max(max_salary)
 
 
-print(get_max_salary('src/jobs.csv'))
-
-
 def get_min_salary(path):
-    """Get the minimum salary of all jobs
+    all_jobs = read(path)
 
-    Must call `read`
+    min_salary = []
 
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
+    for row in all_jobs:
+        # https://www.delftstack.com/howto/python/python-check-if-character-is-number/#:~:text=the%20conditional%20statement.-,Use%20the%20isdigit()%20Method%20to%20Check%20if%20a%20Given,in%20the%20scope%20of%20digits.
+        if row["min_salary"] != '' and row["min_salary"].isdigit():
+            min_salary.append(int(row["min_salary"]))
 
-    Returns
-    -------
-    int
-        The minimum salary paid out of all job opportunities
-    """
-    pass
+    return min(min_salary)
 
 
 def matches_salary_range(job, salary):
