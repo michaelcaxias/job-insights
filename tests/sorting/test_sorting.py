@@ -22,6 +22,3 @@ def test_sort_by_criteria():
 
     sort_by(all_jobs, "date_posted")
     assert all_jobs[-1]["date_posted"] == "2020-04-25"
-
-
-test_sort_by_criteria()
