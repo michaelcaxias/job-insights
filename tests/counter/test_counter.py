@@ -10,4 +10,3 @@ def test_counter():
         assert count_ocurrences('src/jobs', 'notebook') != 0
     except FileNotFoundError:
         assert FileNotFoundError
-
