@@ -83,6 +83,7 @@ def filter_by_salary_range(jobs, salary):
     filtered_salaries = []
     for job in jobs:
       try:
+        # https://www.w3schools.com/python/ref_func_isinstance.asp
         if isinstance(salary, int) and matches_salary_range(job, salary):
             filtered_salaries.append(job)
       except ValueError:
