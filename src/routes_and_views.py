@@ -1,7 +1,6 @@
 from flask import Flask, Blueprint, render_template, request, send_file
 
 from .jobs import read
-from .more_insights import get_job
 from .insights import (
     get_unique_industries,
     get_unique_job_types,
@@ -13,6 +12,7 @@ from .insights import (
 )
 
 from .more_insights import (
+    get_job,
     slice_jobs,
     get_int_from_args,
     build_jobs_urls,
