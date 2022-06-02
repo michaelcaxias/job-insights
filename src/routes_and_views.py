@@ -74,5 +74,10 @@ def list_jobs():
     return render_template("list_jobs.jinja2", ctx=ctx)
 
 
+@bp.route("/jobs/<index>")
+def list_one_job(index):
+    return f"Hello, {index}"
+
+
 def init_app(app: Flask):
     app.register_blueprint(bp)
