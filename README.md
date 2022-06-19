@@ -3,6 +3,8 @@
 
 Este projeto tem como objetivo realizar análises à partir de um conjunto de dados sobre empregos utilizando Flask e Python. 
 
+![sistema](https://user-images.githubusercontent.com/79621661/174462209-89bcd797-9bce-4b2c-99b7-62f730cdc268.png)
+
 ## 💻 Como iniciar
 
 
